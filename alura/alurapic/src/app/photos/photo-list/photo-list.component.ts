@@ -1,28 +1,29 @@
-import { Component, OnInit } from '@angular/core';
-import { PhotosService } from '../photos.service';
-import { ActivatedRoute } from '@angular/router';
-import { Photo } from '../photo';
+import {Component, OnInit} from '@angular/core';
+import {PhotosService} from '../photos.service';
+import {ActivatedRoute} from '@angular/router';
+import {Photo} from '../photo';
 
 @Component({
-  selector: 'app-photo-list',
-  templateUrl: './photo-list.component.html',
-  styleUrls: ['./photo-list.component.css']
+    selector: 'app-photo-list',
+    templateUrl: './photo-list.component.html',
+    styleUrls: ['./photo-list.component.css']
 })
 export class PhotoListComponent implements OnInit {
 
-  photos: Photo[] = [];
+    photos: Photo[] = [];
+    filter = '';
 
-  constructor(
-    private photoService: PhotosService,
-    private activatedRoute: ActivatedRoute
-  ) {
-  }
+    constructor(
+        private photoService: PhotosService,
+        private activatedRoute: ActivatedRoute
+    ) {
+    }
 
-  ngOnInit(): void {
+    ngOnInit(): void {
 
-    const userName = this.activatedRoute.snapshot.params.userName;
+        const userName = this.activatedRoute.snapshot.params.userName;
 
-    this.photoService.listFromUser(userName).subscribe(photos => this.photos = photos);
-  }
+        this.photoService.listFromUser(userName).subscribe(photos => this.photos = photos);
+    }
 
 }
