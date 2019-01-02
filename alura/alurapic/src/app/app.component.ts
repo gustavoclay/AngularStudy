@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { PhotosService } from './photos/photos.service';
 
 @Component({
@@ -6,18 +6,18 @@ import { PhotosService } from './photos/photos.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-
+export class AppComponent implements OnInit {
   title = 'alurapic';
 
   photos: Object[] = [];
 
-  constructor(photoService: PhotosService) {
+  constructor(private photoService: PhotosService) {
 
-    photoService.listFromUser('flavio').subscribe(photos => {
-      console.log(photos[0].userId);
-      this.photos = photos;
-    });
+
+  }
+
+  ngOnInit(): void {
+    this.photoService.listFromUser('flavio').subscribe(photos => this.photos = photos);
 
   }
 
