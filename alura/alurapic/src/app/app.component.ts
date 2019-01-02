@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +8,4 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'alurapic';
 
-  url = 'https://www.gettyimages.com/gi-resources/images/CreativeLandingPage/HP_Sept_24_2018/CR3_GettyImages-159018836.jpg';
-  description = 'Flamingos';
 }
