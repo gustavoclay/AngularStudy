@@ -1,8 +1,9 @@
 import {NgModule} from '@angular/core';
+import {DarkOnHoverDirective} from './dark-on-hover.directive';
 
 @NgModule({
-    declarations: [DarkOnHoverModule],
-    exports: [DarkOnHoverModule]
+    declarations: [DarkOnHoverDirective],
+    exports: [DarkOnHoverDirective]
 })
 export class DarkOnHoverModule {
 
