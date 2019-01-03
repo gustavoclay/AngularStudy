@@ -1,9 +1,9 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
-import {Photo} from '../photo';
+import {Photo} from '../photo/photo';
 import {Subject} from 'rxjs';
 import {debounceTime} from 'rxjs/operators';
-import {PhotosService} from '../photos.service';
+import {PhotoService} from '../photo/photo.service';
 
 @Component({
     selector: 'app-photo-list',
@@ -19,7 +19,7 @@ export class PhotoListComponent implements OnInit, OnDestroy {
     currentPage = 1;
     userName = '';
 
-    constructor(private activatedRoute: ActivatedRoute, private service: PhotosService) {
+    constructor(private activatedRoute: ActivatedRoute, private service: PhotoService) {
     }
 
     ngOnInit(): void {

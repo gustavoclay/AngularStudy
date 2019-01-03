@@ -5,7 +5,7 @@ import {Photo} from './photo';
 const API = 'http://localhost:3000';
 
 @Injectable({providedIn: 'root'})
-export class PhotosService {
+export class PhotoService {
 
     constructor(private http: HttpClient) {
 
