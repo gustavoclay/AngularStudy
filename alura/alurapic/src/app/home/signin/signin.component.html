@@ -4,16 +4,12 @@
 
     <div class="form-group">
         <input formControlName="userName" class="form-control" placeholder="user name" autofocus>
-        <small *ngIf="loginForm.get('userName').errors?.required" class="text-danger d-block mt-2">
-            User name is required!
-        </small>
+        <app-vmessage *ngIf="loginForm.get('userName').errors?.required" text="user name required!"></app-vmessage>
     </div>
 
     <div class="form-group">
         <input formControlName="password" type="password" class="form-control" placeholder="password">
-        <small *ngIf="loginForm.get('password').errors?.required" class="text-danger d-block mt-2">
-             Password is required!
-        </small>
+        <app-vmessage *ngIf="loginForm.get('password').errors?.required" text="password is required!"></app-vmessage>
     </div>
 
     <button [disabled]="loginForm.invalid" type="submit" class="btn btn-primary btn-block">Login</button>
