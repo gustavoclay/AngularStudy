@@ -8,7 +8,7 @@ export class PlataformDetectionService {
 
     }
 
-    static isPlataformBrowser() {
+    isPlataformBrowser() {
         return isPlatformBrowser(PLATFORM_ID);
     }
 }

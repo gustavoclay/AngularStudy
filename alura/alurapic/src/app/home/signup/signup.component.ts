@@ -8,7 +8,8 @@ import {Router} from '@angular/router';
 import {PlataformDetectionService} from '../../core/plataform-detection/plataform-detection.service';
 
 @Component({
-    templateUrl: 'signup.template.html'
+    templateUrl: 'signup.template.html',
+    providers: [UserNotTakenValidatorService]
 })
 export class SignupComponent implements OnInit {
 
@@ -57,7 +58,7 @@ export class SignupComponent implements OnInit {
                 ]
             ]
         });
-        PlataformDetectionService.isPlataformBrowser() && this.inputEmail.nativeElement.focus();
+        this.plataformDetectionService.isPlataformBrowser() && this.inputEmail.nativeElement.focus();
     }
 
     signup() {
