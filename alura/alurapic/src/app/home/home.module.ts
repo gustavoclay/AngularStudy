@@ -6,6 +6,7 @@ import {VmessageModule} from '../shared/components/vmessage/vmessage.module';
 import {RouterModule} from '@angular/router';
 import {SignupComponent} from './signup/signup.component';
 import {HomeComponent} from './home.component';
+import {HomeRoutingModule} from './home.routing.module';
 
 @NgModule({
     imports: [
@@ -13,6 +14,7 @@ import {HomeComponent} from './home.component';
         CommonModule,
         VmessageModule,
         RouterModule,
+        HomeRoutingModule,
         FormsModule //não precisa, retirar depois, usar reactive form module
     ],
     exports: [],

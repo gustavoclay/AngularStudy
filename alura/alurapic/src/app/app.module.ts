@@ -17,7 +17,6 @@ import {CoreModule} from './core/core.module';
         PhotosModule,
         AppRoutingModule,
         ErrorsModule,
-        HomeModule,
         CoreModule
     ],
     providers: [],
