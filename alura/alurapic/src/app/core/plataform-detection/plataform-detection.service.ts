@@ -4,11 +4,11 @@ import {isPlatformBrowser} from '@angular/common';
 @Injectable({providedIn: 'root'})
 export class PlataformDetectionService {
 
-    constructor(@Inject(PLATFORM_ID) private plataform_id: String) {
+    constructor(@Inject(PLATFORM_ID) private plataform_id: string) {
 
     }
 
-    isPlataformBrowser() {
+    static isPlataformBrowser() {
         return isPlatformBrowser(PLATFORM_ID);
     }
 }
